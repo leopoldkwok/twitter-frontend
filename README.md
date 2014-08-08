@@ -5,8 +5,6 @@ The challenge was to recreate the Twitter feed page in HTML, CSS and Javascript 
 
 Goal 1: Make it look like the real Twitter on a desktop.
 
-	See it here: https://github.com/Bayonnaise/Twitter-front-end/blob/master/twitter.html
-	
 Goal 2: Add JS for infinite scrolling with a spinner to show data is being loaded. Expand the tweet box on focus, popup to add a new tweet.
 
 Goal 3: Make it responsive.

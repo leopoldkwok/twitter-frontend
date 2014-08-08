@@ -93,7 +93,8 @@ body {
 	#options-area {
 		float: right;
 		text-align: right;
-		width: 400px;
+		width: 386px;
+		display: flex;
 	}
 
 		#search {
@@ -112,6 +113,31 @@ body {
 				border-radius: 21px;
 				font-size: 12px;
 				opacity: 0.6;
+			}
+
+		#options-area ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			line-height: 46px;
+		}
+
+			#options-area ul li {
+				padding: 0 14px 0 4px;
+				display: inline;
+				height: 46px;
+			}
+
+			#options-area img {
+				width: 20px;
+				height: 20px;
+				vertical-align: middle;
+				padding: 0 4px 0 0;
+			}
+
+			#options-area img #compose {
+				width: 50px;
+				height: 50px;
 			}
 
 .page-container {
