@@ -1,0 +1,126 @@
+body {
+	font-family: "Gotham Narrow SSm",sans-serif,Arial;
+	font-size: 14px;
+	line-height: 18px;
+	background-image: url('https://abs.twimg.com/images/themes/theme1/bg.png');
+	background-repeat: no-repeat;
+	background-color: #C0DEED; /*theme color: #0084B4*/
+}
+
+.permanent-nav-bar {
+	background: #fff;
+	width: 100%;
+	height: 46px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	border-bottom: 1px solid rgba(0,0,0,0.15);
+	text-decoration: none;
+}
+
+.nav-container {
+	max-width: 1190px;
+	margin: 0 auto;
+	display: flex;
+	color: #66757f;
+}
+
+	#main-nav-area {
+		text-align: left;
+		width: 409px;
+	}
+
+		#main-nav-area ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			line-height: 46px;
+		}
+
+			#main-nav-area ul li {
+				font-size: 13px;
+				font-weight: 500;
+				padding: 0 14px 0 4px;
+				display: inline;
+			}
+
+			.nav-section {
+				display: inline;
+				transition: all .15s ease-in-out;
+			}
+
+			.nav-section:hover {
+				border-bottom: 4px solid #0084b4;
+			}
+
+			.nav-section .icon {
+				width: 22px;
+				height: 22px;
+				vertical-align: middle;
+			}
+
+			.nav-section .text {
+				margin-left: 3px;
+				margin-top: 17px;
+				vertical-align: middle;
+			}
+
+	#logo-area {
+		flex: 1;
+		text-align: center;
+	}
+		
+		#twitter-logo {
+			margin: 0 auto;
+			margin-top: 14px;
+			width: 24px;
+			height: 21px;
+		}
+
+	#options-area {
+		float: right;
+		text-align: right;
+		width: 400px;
+	}
+
+.page-container {
+	padding: 56px 14px 15px;
+	width: 1190px;
+	margin: 0 auto;
+}
+
+	.content-bar {
+		float: left;
+		border-radius: 6px;
+		background-color: white;
+		display: block;
+	}
+
+	.sidebar {
+		width: 290px;
+	}
+
+	#tweets-column {
+		width: 590px;
+		margin: 0 10px;
+	}
+
+		.content-header {
+			border: 1px solid #e1e8ed;
+			border-radius: 6px 6px 0 0;
+			padding: 12.5px;
+			color: #66757f;
+			font-size: 22px;
+			font-weight: 300;
+			line-height: 22px;
+		}
+
+		.tweet-container {
+			border-left: 1px solid #e1e8ed;
+			border-right: 1px solid #e1e8ed;
+			min-height: 51px;
+			padding: 9px 12px;
+			font-family: "Helvetica Neue",Arial,sans-serif;
+			border-bottom: 1px solid #e1e8ed;
+		}
