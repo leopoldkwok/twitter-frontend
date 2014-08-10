@@ -4,6 +4,9 @@
 	<title>Twitter</title>
 	<link rel='stylesheet' type="text/css" href="reset.css">
 	<link rel='stylesheet' type="text/css" href="twitter.css">
+	<script src='mustache.js'></script>
+	<script src='jquery-2.1.1.min.js'></script>
+	<script src='twitter-scripts.js'></script>
 </head>
 
 <body>
@@ -46,6 +49,7 @@
 	</nav>
 
 	<section class='page-container'>
+		<div id='left-two-columns'>
 		<section class='content-bar sidebar'>
 			
 			<section id='profile-box'>
@@ -82,7 +86,27 @@
 				</section>
 				
 				<section class='rounded-footer' id='compose-tweet'>
-					Compose
+					<input id='tweet-input-small' type='text' value='Compose new Tweet...'>
+				</section>
+			</section>
+
+			<section id='trends'>
+				<section class='rounded-header' id='trends-header'>
+					United Kingdom Trends:
+				</section>
+				<section id='trends-body'>
+					<ul>
+						<li>#Gaza</li>
+						<li>Arsenal</li>
+						<li>Your mum</li>
+						<li>HTML</li>
+						<li>Rory McIlroy</li>
+						<li>Charles and Eddie </li>
+						<li>Cheese</li>
+						<li>Your dad</li>
+						<li>Chutney</li>
+						<li>Something else</li>
+					</ul>
 				</section>
 			</section>
 		</section>
@@ -94,31 +118,64 @@
 			</section>
 			
 			<section id='tweet-stream'>
-				<ol>
+				<ol id='tweet-list'>
 					<li class='tweet-container'>
 						<span><img class='tweet-image' src='images/profile1.png'></span>
 						<span class='tweet-body'>
-								<span class='tweet-real-name'>Mesut Ozil</span>
-								<span class='tweet-username'><a href='#'>@MesutOzil1088 - 11m</a></span>
-								<div>
-									what a draw! already looking forward to the matches against @Besiktas! #Turkey #İstanbul #Arsenal #AFC #UCLdraw
-								</div>
-								<div class='tweet-furniture'>
-									<ul>
-										<li class='expand'><a href='#'>Expand</a></li>
-										<li><a href='#'><img src='images/reply.png'>Reply</a></li>
-										<li><a href='#'><img src='images/retweet.png'>Retweet</a></li>
-										<li><a href='#'><img src='images/favorite.png'>Favourite</a></li>
-										<li><a href='#'>... More</a></li>
-									</ul>
-								</div>
+							<span class='tweet-real-name'>Mesut Ozil</span>
+							<span class='tweet-username'><a href='#'>@MesutOzil1088 - 11m</a></span>
+							<div>
+								what a draw! already looking forward to the matches against @Besiktas! #Turkey #İstanbul #Arsenal #AFC #UCLdraw
+							</div>
+							<div class='tweet-furniture'>
+								<ul>
+									<li class='expand'><a href='#'>Expand</a></li>
+									<li><a href='#'><img src='images/reply.png'>Reply</a></li>
+									<li><a href='#'><img src='images/retweet.png'>Retweet</a></li>
+									<li><a href='#'><img src='images/favorite.png'>Favourite</a></li>
+									<li><a href='#'>... More</a></li>
+								</ul>
+							</div>
 						</span>
 					</li>
-					<li class='tweet-container'>Test</li>
-					<li class='tweet-container'>Test</li>
-					<li class='tweet-container'>Test</li>
-					<li class='tweet-container'>Test</li>
-					<li class='tweet-container'>Test</li>
+					<li class='tweet-container'>
+						<span><img class='tweet-image' src='images/kerbal.png'></span>
+						<span class='tweet-body'>
+							<span class='tweet-real-name'>Kerbal Space Program</span>
+							<span class='tweet-username'><a href='#'>@KerbalSpaceP - 18m</a></span>
+							<div>
+								Three months after joining forces with @cursenetwork this is what our awesome players have accomplished. http://i.imgur.com/HTQiCJ1.jpg 
+							</div>
+							<div class='tweet-furniture'>
+								<ul>
+									<li class='expand'><a href='#'>Expand</a></li>
+									<li><a href='#'><img src='images/reply.png'>Reply</a></li>
+									<li><a href='#'><img src='images/retweet.png'>Retweet</a></li>
+									<li><a href='#'><img src='images/favorite.png'>Favourite</a></li>
+									<li><a href='#'>... More</a></li>
+								</ul>
+							</div>
+						</span>
+					</li>
+					<li class='tweet-container'>
+						<span><img class='tweet-image' src='images/brooker.jpeg'></span>
+						<span class='tweet-body'>
+							<span class='tweet-real-name'>Charlie Brooker</span>
+							<span class='tweet-username'><a href='#'>@charltonbrooker - 25m</a></span>
+							<div>
+								Yep so it's new Touch of Cloth on Sky1 any minute now. So unless the world ends in about ten minutes time you should be okay. 
+							</div>
+							<div class='tweet-furniture'>
+								<ul>
+									<li class='expand'><a href='#'>Expand</a></li>
+									<li><a href='#'><img src='images/reply.png'>Reply</a></li>
+									<li><a href='#'><img src='images/retweet.png'>Retweet</a></li>
+									<li><a href='#'><img src='images/favorite.png'>Favourite</a></li>
+									<li><a href='#'>... More</a></li>
+								</ul>
+							</div>
+						</span>
+					</li>
 					<li class='tweet-container'>Test</li>
 					<li class='tweet-container'>Test</li>
 					<li class='tweet-container'>Test</li>
@@ -132,8 +189,9 @@
 			</section>
 		
 		</section>
+		</div>
 
-		<section class='content-bar sidebar'>
+		<section class='content-bar sidebar' id='bar-right'>
 			<section id='who-to-follow-box'>
 				
 				<section class='rounded-header'>
@@ -153,24 +211,46 @@
 			<section id='about-twitter-box'>
 				<ul id='about-list'>
 					<li>2014 Twitter</li>
-					<li>About</li>
-					<li>Help</li>
-					<li>Terms</li>
-					<li>Privacy</li>
-					<li>Cookies</li>
-					<li>Ads info</li>
-					<li>Brand</li>
-					<li>Blog</li>
-					<li>Status</li>
-					<li>Apps</li>
-					<li>Jobs</li>
-					<li>Advertise</li>
-					<li>Businesses</li>
-					<li>Media</li>
-					<li>Developers</li>
+					<li><a href='#'>About</a></li>
+					<li><a href='#'>Help</a></li>
+					<li><a href='#'>Terms</a></li>
+					<li><a href='#'>Privacy</a></li>
+					<li><a href='#'>Cookies</a></li>
+					<li><a href='#'>Ads info</a></li>
+					<li><a href='#'>Brand</a></li>
+					<li><a href='#'>Blog</a></li>
+					<li><a href='#'>Status</a></li>
+					<li><a href='#'>Apps</a></li>
+					<li><a href='#'>Jobs</a></li>
+					<li><a href='#'>Advertise</a></li>
+					<li><a href='#'>Businesses</a></li>
+					<li><a href='#'>Media</a></li>
+					<li><a href='#'>Developers</a></li>
 				</ul>
 			</section>
 		</section>
 	</section>
 </body>
 </html>
+
+<template id='new-tweet'>
+	<li class='tweet-container'>
+		<span><img class='tweet-image' src='images/profile1.png'></span>
+		<span class='tweet-body'>
+				<span class='tweet-real-name'>Mesut Ozil</span>
+				<span class='tweet-username'><a href='#'>@MesutOzil1088 - 11m</a></span>
+				<div>
+					what a draw! already looking forward to the matches against @Besiktas! #Turkey #İstanbul #Arsenal #AFC #UCLdraw
+				</div>
+				<div class='tweet-furniture'>
+					<ul>
+						<li class='expand'><a href='#'>Expand</a></li>
+						<li><a href='#'><img src='images/reply.png'>Reply</a></li>
+						<li><a href='#'><img src='images/retweet.png'>Retweet</a></li>
+						<li><a href='#'><img src='images/favorite.png'>Favourite</a></li>
+						<li><a href='#'>... More</a></li>
+					</ul>
+				</div>
+		</span>
+	</li>
+</template>

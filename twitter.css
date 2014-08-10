@@ -18,6 +18,7 @@ a {
 }
 
 #permanent-nav-bar {
+	z-index: 1000;
 	background: #fff;
 	width: 100%;
 	min-width: 900px;
@@ -137,14 +138,14 @@ a {
 				padding: 0 4px 0 0;
 			}
 
-			#right-options-area img #compose {
+			#compose {
 				width: 50px;
 				height: 50px;
 			}
 
 .page-container {
 	padding: 56px 14px 15px;
-	width: 1190px;
+	max-width: 1190px;
 	margin: 0 auto;
 }
 
@@ -213,6 +214,7 @@ a {
 		}
 
 	#profile-info {
+		height: 85px;
 		border-left: 1px solid #e1e8ed;
 		border-right: 1px solid #e1e8ed;
 		padding: 9px 12px;
@@ -222,9 +224,9 @@ a {
 	}
 
 		#username-box {
-			position: absolute;
-			left: 140px;
-			top: 160px;
+			position: relative;
+			left: 85px;
+			top: -37px;
 		}
 
 			#real-name {
@@ -239,6 +241,8 @@ a {
 			}
 
 		#info-counters {
+			position: relative;
+			top: -35px;
 			margin-left: 5px;
 			padding-top: 5px;
 		}
@@ -277,7 +281,37 @@ a {
 			}
 
 		#compose-tweet {
-			background-color: #f5f8fa;
+			background-color: #E5F2F7 ;
+		}
+
+			#tweet-input-small {
+				width: 255px;
+				height: 28px;
+				border: 1px solid;
+				border-color: #BFE0EC;
+				border-radius: 3px;
+				font-size: 14px;
+				color: #66757f;
+				padding-left: 8px;
+			}
+
+		#trends-header {
+			border-bottom: 0;
+		}
+
+		#trends-body {
+			background-color: white;
+			padding-left: 15px;
+			border-left: 1px solid #e1e8ed;
+			border-right: 1px solid #e1e8ed;
+			border-radius: 0 0 6px 6px;
+			padding-bottom: 10px;
+			color: #0084B4;
+		}
+
+		#trends-body li {
+			padding-bottom: 2px;
+			font-size: 12px;
 		}
 
 	#tweets-column {
@@ -341,7 +375,8 @@ a {
 
 				.tweet-furniture li {
 					display: inline;
-					margin-left: 6px;
+					margin-right: 6px;
+					padding-right: 2px;
 				}
 
 				.tweet-furniture a {
@@ -350,7 +385,7 @@ a {
 				}
 
 				.tweet-furniture a:hover {
-					opacity:1;
+					opacity: 1;
 				}
 
 				.tweet-furniture img {
@@ -397,3 +432,15 @@ a {
 			display: inline;
 			padding-right: 8px;
 		}
+
+
+@media only screen and (max-width: 1235px) {
+	#bar-right {
+		display: none;
+	}
+
+	#left-two-columns {
+		width: 923px;
+		margin: 0 auto;
+	}
+}
