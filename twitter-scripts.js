@@ -1,8 +1,10 @@
 $(document).ready(function() {
-	$('#test').on('click', function(event) {
-		event.preventDefault();
-		$('#tweet-container li:gt(4)').fadeOut(function() {
-			this.remove();
-		})
+	$('#tweet-input-small').click(function() {
+		$(this).height('80px');
 	});
+
+	// $(document).scroll(function () {
+	// 	var newTweet = Mustache.render (($'#new-tweet').html(), tweet);
+	// 	$(newTweet).appendTo($('#tweet-list')).html;
+	// })
 })
