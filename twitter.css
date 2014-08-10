@@ -11,9 +11,16 @@ body {
 	background-color: #C0DEED; /*theme color: #0084B4*/
 }
 
-.permanent-nav-bar {
+a {
+	cursor: pointer;
+	text-decoration: none;
+	color: inherit;
+}
+
+#permanent-nav-bar {
 	background: #fff;
 	width: 100%;
+	min-width: 900px;
 	height: 46px;
 	position: fixed;
 	top: 0;
@@ -23,7 +30,7 @@ body {
 	text-decoration: none;
 }
 
-.nav-container {
+#left-nav-container {
 	max-width: 1190px;
 	margin: 0 auto;
 	display: flex;
@@ -42,27 +49,22 @@ body {
 			line-height: 46px;
 		}
 
-			#main-nav-area ul li {
+			.nav-section {
 				font-size: 13px;
 				font-weight: 500;
+				display: inline;
 				padding: 0 14px 0 4px;
-				display: inline;
-				height: 46px;
-			}
-
-			.nav-section {
-				display: inline;
-				padding: 0 5px;
 				height: 42px;
 			}
 
 			.nav-section.active {
 				border-bottom: 4px solid #0084b4;
+				color: #0084B4;
 			}
 
 			.nav-section:hover {
 				border-bottom: 4px solid #0084b4;
-				transition: all .15s ease-in-out;
+				transition: border .15s ease-in-out;
 				color: #0084B4;
 			}
 
@@ -90,7 +92,7 @@ body {
 			height: 21px;
 		}
 
-	#options-area {
+	#right-options-area {
 		float: right;
 		text-align: right;
 		width: 386px;
@@ -115,27 +117,27 @@ body {
 				opacity: 0.6;
 			}
 
-		#options-area ul {
+		#right-options-area ul {
 			margin: 0;
 			padding: 0;
 			list-style-type: none;
 			line-height: 46px;
 		}
 
-			#options-area ul li {
+			#right-options-area ul li {
 				padding: 0 14px 0 4px;
 				display: inline;
 				height: 46px;
 			}
 
-			#options-area img {
+			#right-options-area img {
 				width: 20px;
 				height: 20px;
 				vertical-align: middle;
 				padding: 0 4px 0 0;
 			}
 
-			#options-area img #compose {
+			#right-options-area img #compose {
 				width: 50px;
 				height: 50px;
 			}
@@ -149,7 +151,6 @@ body {
 	.content-bar {
 		float: left;
 		border-radius: 6px;
-		background-color: white;
 		display: block;
 	}
 
@@ -157,26 +158,242 @@ body {
 		width: 290px;
 	}
 
+	.rounded-header {
+		border: 1px solid #e1e8ed;
+		border-radius: 6px 6px 0 0;
+		padding: 12.5px;
+		color: #66757f;
+		font-size: 22px;
+		font-weight: 300;
+		line-height: 22px;
+		background-color: white;
+	}
+
+		.rounded-header a {
+			color: #0084B4;
+		}
+
+		.rounded-header #small-links {
+			font-size: 12px;
+			font-weight: 100;
+		}
+
+	.rounded-footer {
+		border: 1px solid #e1e8ed;
+		border-radius: 0 0 6px 6px;
+		padding: 12.5px;
+		color: #66757f;
+		margin-bottom: 10px;
+		background-color: white;
+		border-top: 0;
+	}
+
+	#profile-cover-photo {
+		height: 96px;
+		box-sizing: border-box;
+		background-image: url('images/profile-cover.jpg');
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	border: 0;
+	}
+
+		#profile-pic {
+			box-sizing: border-box;
+			height: 70px;
+			width: 70px;
+			background-image: url('images/profile-pic.jpg');
+  		background-repeat: no-repeat;
+  		background-size: cover;
+  		vertical-align: bottom;
+  		margin-top: -30px;
+  		margin-left: 5px;
+  		border-radius: 6px;
+  		padding: 3px;
+  		border: 3px solid white;
+		}
+
+	#profile-info {
+		border-left: 1px solid #e1e8ed;
+		border-right: 1px solid #e1e8ed;
+		padding: 9px 12px;
+		font-family: "Helvetica Neue",Arial,sans-serif;
+		border-bottom: 1px solid #e1e8ed;
+		background-color: white;
+	}
+
+		#username-box {
+			position: absolute;
+			left: 140px;
+			top: 160px;
+		}
+
+			#real-name {
+				font-weight: 500;
+				font-size: 18px;
+				line-height: 21px;
+			}
+
+			#username a {
+				font-size: 12px;
+				color: #66757f;
+			}
+
+		#info-counters {
+			margin-left: 5px;
+			padding-top: 5px;
+		}
+
+			#info-counters ul{
+				box-sizing: border-box;
+				display: table;
+				margin: 0;
+				min-width: 100%;
+				padding: 0;
+				list-style: none;
+			}
+
+			#info-counters li {
+				display: table-cell;
+				padding: 0;
+				vertical-align: bottom;
+				color: #0084B4
+			}
+
+			.counter-header {
+				color: #8c9ca9;
+				font-size: 10px;
+				letter-spacing: .02em;
+				text-transform: uppercase;
+			}
+
+			.counter-header:hover {
+				color: #0084B4
+			}
+
+			.counter-number {
+				color: #0084B4;
+				font-size: 18px;
+				letter-spacing: .02em;
+			}
+
+		#compose-tweet {
+			background-color: #f5f8fa;
+		}
+
 	#tweets-column {
 		width: 590px;
 		margin: 0 10px;
 	}
 
-		.content-header {
-			border: 1px solid #e1e8ed;
-			border-radius: 6px 6px 0 0;
-			padding: 12.5px;
-			color: #66757f;
-			font-size: 22px;
-			font-weight: 300;
-			line-height: 22px;
-		}
-
 		.tweet-container {
 			border-left: 1px solid #e1e8ed;
 			border-right: 1px solid #e1e8ed;
-			min-height: 51px;
+			min-height: 50px;
 			padding: 9px 12px;
 			font-family: "Helvetica Neue",Arial,sans-serif;
 			border-bottom: 1px solid #e1e8ed;
+			background-color: white;
+			cursor: pointer;
+		}
+
+		.tweet-container:hover {
+			background-color: #f5f8fa;
+		}
+
+			.tweet-image {
+				margin-right: 10px;
+				height: 50px;
+				width: 50px;
+				border-radius: 5px;
+				vertical-align: top;
+				float: left;
+			}
+
+			.tweet-body {
+
+			}
+
+				.tweet-real-name {
+					font-weight: 500;
+					font-size: 14px;
+				}
+
+				.tweet-username {
+					margin-left: 2px;
+					font-size: 12px;
+					color: #66757f;
+				}
+
+				.tweet-furniture {
+					color: #66757f;
+					font-size: 12px;
+					margin-left: 60px;
+					margin-top: 8px;
+				}
+
+				.tweet-furniture ul {
+					text-align: right;
+				}
+
+					.expand {
+						float: left;
+					}
+
+				.tweet-furniture li {
+					display: inline;
+					margin-left: 6px;
+				}
+
+				.tweet-furniture a {
+					color: #66757f;
+					opacity: 0.6;
+				}
+
+				.tweet-furniture a:hover {
+					opacity:1;
+				}
+
+				.tweet-furniture img {
+					text-align: center;
+					margin-right: 5px;
+					margin-bottom: -3px;
+				}
+
+				
+
+
+	#who-to-follow-main {
+		border-left: 1px solid #e1e8ed;
+		border-right: 1px solid #e1e8ed;
+		padding: 9px 12px;
+		border: 1px solid #e1e8ed;
+		border-top: 0;
+		background-color: white;
+	}
+
+	#follow-links {
+		border-top: 0;
+		background-color: #f5f8fa;
+		font-size: 12px;
+		text-align: center;
+	}
+
+	#follow-links a {
+		color: #0084B4;
+	}
+
+	#about-twitter-box {
+		margin-top: 10px;
+		padding: 15px;
+		border: 1px solid #e1e8ed;
+		border: 0;
+		border-radius: 6px;
+		background-color: white;
+		color: #8899a6;
+		font-size: 12px;
+	}
+
+		#about-list li {
+			display: inline;
+			padding-right: 8px;
 		}

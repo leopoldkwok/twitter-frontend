@@ -7,40 +7,32 @@
 </head>
 
 <body>
-	<nav class='permanent-nav-bar'>
-		<section class='nav-container'>
+	<nav id='permanent-nav-bar'>
+		<section id='left-nav-container'>
 			<section id='main-nav-area'>
 				<ul>
-					<li>
-						<section class='nav-section active'>
+					<li class='nav-section active'>
 							<span><img class='icon' src='images/Home-icon.png'></span>
 							<span class="text">Home</span>
-						</section>
 					</li>
-					<li>
-						<section class='nav-section'>
+					<li class='nav-section'>
 							<span><img class='icon' src='images/Notifications-icon.png'></span>
 							<span class="text">Notifications</span>
-						</section>
 					</li>
-					<li>
-						<section class='nav-section'>
+					<li class='nav-section'>
 							<span><img class='icon' src='images/Discover-icon.png'></span>
 							<span class="text">Discover</span>
-						</section>
 					</li>
-					<li>
-						<section class='nav-section'>
+					<li class='nav-section'>
 							<span><img class='icon' src='images/Me-icon.png'></span>
 							<span class="text">Me</span>
-						</section>
 					</li>
 				</ul>
 			</section>
 			<section id='logo-area'>
 				<img id='twitter-logo' src='images/Twitter_logo_blue.png'>
 			</section>
-			<section id='options-area'>
+			<section id='right-options-area'>
 				<form id='search' action="#">
 					<input id='search-box' type='text' placeholder='Search Twitter'>
 				</form>
@@ -55,16 +47,73 @@
 
 	<section class='page-container'>
 		<section class='content-bar sidebar'>
-			left
+			
+			<section id='profile-box'>
+				<div class='rounded-header' id='profile-cover-photo'>
+				</div>
+				
+				<section id='profile-info'>
+					<div id='profile-pic'>
+					</div>
+					<div id='username-box'>
+						<div id='real-name'>
+							David Bayon
+						</div>
+						<div id='username'>
+							<a href='#'>@Bayonnaise</a>
+						</div>
+					</div>
+					<div id='info-counters'>
+						<ul>
+							<li>
+								<div class='counter-header'>TWEETS</div>
+								<div class='counter-number'>15.1K</div>
+							</li>
+							<li>
+								<div class='counter-header'>FOLLOWING</div>
+								<div class='counter-number'>114</div>
+							</li>
+							<li>
+								<div class='counter-header'>FOLLOWERS</div>
+								<div class='counter-number'>810</div>
+							</li>
+						</ul>	
+					</div>
+				</section>
+				
+				<section class='rounded-footer' id='compose-tweet'>
+					Compose
+				</section>
+			</section>
 		</section>
 
 		<section class='content-bar' id='tweets-column'>
-			<section class='content-header'>
+			
+			<section class='rounded-header'>
 				Tweets
 			</section>
+			
 			<section id='tweet-stream'>
 				<ol>
-					<li class='tweet-container'>Test</li>
+					<li class='tweet-container'>
+						<span><img class='tweet-image' src='images/profile1.png'></span>
+						<span class='tweet-body'>
+								<span class='tweet-real-name'>Mesut Ozil</span>
+								<span class='tweet-username'><a href='#'>@MesutOzil1088 - 11m</a></span>
+								<div>
+									what a draw! already looking forward to the matches against @Besiktas! #Turkey #İstanbul #Arsenal #AFC #UCLdraw
+								</div>
+								<div class='tweet-furniture'>
+									<ul>
+										<li class='expand'><a href='#'>Expand</a></li>
+										<li><a href='#'><img src='images/reply.png'>Reply</a></li>
+										<li><a href='#'><img src='images/retweet.png'>Retweet</a></li>
+										<li><a href='#'><img src='images/favorite.png'>Favourite</a></li>
+										<li><a href='#'>... More</a></li>
+									</ul>
+								</div>
+						</span>
+					</li>
 					<li class='tweet-container'>Test</li>
 					<li class='tweet-container'>Test</li>
 					<li class='tweet-container'>Test</li>
@@ -78,11 +127,48 @@
 					<li class='tweet-container'>Test</li>
 				</ol>
 			</section>
+			
+			<section class='rounded-footer'>
+			</section>
+		
 		</section>
 
 		<section class='content-bar sidebar'>
-			<section class='content-header'>
-				Who to follow
+			<section id='who-to-follow-box'>
+				
+				<section class='rounded-header'>
+					<span>Who to follow</span>
+					<span id='small-links'> - <a href='#'>Refresh</a> - <a href='#'>View all</a></span>
+				</section>
+				
+				<section id='who-to-follow-main'>
+					These people
+				</section>
+			
+				<section class='rounded-footer' id='follow-links'>
+					<a href='#'>Find people you know</a> - <a href='#'>Popular accounts</a>
+				</section>
+			</section>
+
+			<section id='about-twitter-box'>
+				<ul id='about-list'>
+					<li>2014 Twitter</li>
+					<li>About</li>
+					<li>Help</li>
+					<li>Terms</li>
+					<li>Privacy</li>
+					<li>Cookies</li>
+					<li>Ads info</li>
+					<li>Brand</li>
+					<li>Blog</li>
+					<li>Status</li>
+					<li>Apps</li>
+					<li>Jobs</li>
+					<li>Advertise</li>
+					<li>Businesses</li>
+					<li>Media</li>
+					<li>Developers</li>
+				</ul>
 			</section>
 		</section>
 	</section>
