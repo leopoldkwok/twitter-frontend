@@ -293,6 +293,32 @@ a {
 				font-size: 14px;
 				color: #66757f;
 				padding-left: 8px;
+
+			}
+
+			#invisible-compose-bits {
+				display: none;
+			}
+
+			#tweet-icons {
+				height: 20px;
+				margin-left: 11px;
+				margin-top: 15px;
+				margin-bottom: 5px;
+				vertical-align: center;
+			}
+
+			#tweet-button {
+				color: white;
+				border-radius: 6px;
+				margin-top: 10px;
+				float: right;
+				height: 35px;
+				width: 90px;
+				background-color: #0084B4;
+				opacity: 0.2;
+				text-shadow: none;
+				box-shadow: none;
 			}
 
 		#trends-header {

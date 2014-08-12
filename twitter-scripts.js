@@ -1,6 +1,10 @@
 $(document).ready(function() {
-	$('#tweet-input-small').click(function() {
+	$('#tweet-input-small').focus(function() {
 		$(this).height('80px');
+		$('#invisible-compose-bits').show();
+	}).blur(function(){
+		$(this).height('28px');
+		$('#invisible-compose-bits').hide();
 	});
 
 	// $(document).scroll(function () {
