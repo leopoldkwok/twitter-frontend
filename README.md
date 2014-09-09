@@ -17,3 +17,11 @@ Goal 2: Make it responsive.
 ####Next steps
 
 Goal 3: Add JS for infinite scrolling with a spinner to show data is being loaded. Expand the tweet box on focus, popup to add a new tweet.
+
+####How to run
+
+```shell
+git clone https://github.com/Bayonnaise/Twitter-front-end.git
+cd Twitter-front-end
+open twitter.html
+```
