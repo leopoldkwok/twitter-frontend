@@ -1,4 +1,4 @@
-# Week 7 Makers Challenge
+# Week 7 Friday Challenge
 ## Recreate the Twitter front-end
 
 ####Screenshot
