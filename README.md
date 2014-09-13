@@ -2,7 +2,7 @@
 ## Recreate the Twitter front-end
 
 ####Screenshot
-![Image1](https://github.com/Bayonnaise/Twitter-front-end/blob/master/images/Twitter-front-end.png)
+![Image1](/images/Twitter-front-end.png)
 
 ####Objectives
 
