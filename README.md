@@ -1,5 +1,5 @@
 # Week 7 Friday Challenge
-## Recreate the Twitter front-end
+### Recreate the Twitter front-end
 
 ####Screenshot
 ![Image1](/images/Twitter-front-end.png)
