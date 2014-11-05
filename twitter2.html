@@ -1,137 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Twitter</title>
-	<link rel='stylesheet' type="text/css" href="reset.css">
-	<link rel='stylesheet' type="text/css" href="twitter.css">
-	<script src='mustache.js'></script>
-	<script src='jquery-2.1.1.min.js'></script>
-	<script src='twitter-scripts.js'></script>
-	<script type="text/javascript" src="http://codysherman.com/tools/infinite-scrolling/code" ></script>
-	
-</head>
-
-<body>
-	<nav id='permanent-nav-bar'>
-		<section id='left-nav-container'>
-			<section id='main-nav-area'>
-				<ul>
-					<li class='nav-section active'>
-							<span><img class='icon' src='images/Home-icon.png'></span>
-							<span class="text">Home</span>
-					</li>
-					<li class='nav-section'>
-							<span><img class='icon' src='images/Notifications-icon.png'></span>
-							<span class="text">Notifications</span>
-					</li>
-					<li class='nav-section'>
-							<span><img class='icon' src='images/Discover-icon.png'></span>
-							<span class="text">Discover</span>
-					</li>
-					<li class='nav-section'>
-							<span><img class='icon' src='images/Me-icon.png'></span>
-							<span class="text">Me</span>
-					</li>
-				</ul>
-			</section>
-			<section id='logo-area'>
-				<img id='twitter-logo' src='images/Twitter_logo_blue.png'>
-			</section>
-			<section id='right-options-area'>
-				<form id='search' action="#">
-					<input id='search-box' type='text' placeholder='Search Twitter'>
-				</form>
-				<ul>
-					<li><img src='images/Messages-icon.png'></li>
-					<li><img src='images/Settings-icon.png'></li>
-					<li><img id='compose' src='images/Compose-icon.png'></li>
-				</ul>
-			</section>
-		</section>
-	</nav>
-
-	<section class='page-container'>
-		<div id='left-two-columns'>
-		<section class='content-bar sidebar'>
-			
-			<section id='profile-box'>
-				<div class='rounded-header' id='profile-cover-photo'>
-				</div>
-				
-				<section id='profile-info'>
-					<div id='profile-pic'>
-					</div>
-					<div id='username-box'>
-						<div id='real-name'>
-							Leopold Kwok
-						</div>
-						<div id='username'>
-							<a href='#'>@Leopoldkwok</a>
-						</div>
-					</div>
-					<div id='info-counters'>
-						<ul>
-							<li>
-								<div class='counter-header'>TWEETS</div>
-								<div class='counter-number'>5</div>
-							</li>
-							<li>
-								<div class='counter-header'>FOLLOWING</div>
-								<div class='counter-number'>472</div>
-							</li>
-							<li>
-								<div class='counter-header'>FOLLOWERS</div>
-								<div class='counter-number'>69</div>
-							</li>
-						</ul>	
-					</div>
-				</section>
-				
-				<section class='rounded-footer' id='compose-tweet'>
-					<input id='tweet-input-small' type='text' placeholder='Compose new Tweet...'>
-					<div id='invisible-compose-bits'>
-						<span><img id='tweet-icons' src='images/tweet-icons.png'></span>
-						<span><button id='tweet-button'>Tweet</button></span>
-					</div>
-				</section>
-			</section>
-
-			<section id='trends'>
-				<section class='rounded-header' id='trends-header'>
-					Trends
-						<a href="">&middot; <a style="font-size:12px;">Change</a> 
-
-						
-				</section>
-				<section id='trends-body'>
-					<ul>
-						<li>iPhone 6</li>
-						<li>Silicon Valley</li>
-						<li>Derren Brown</li>
-						<li>#Cilla</li>
-						<li>Apple</li>
-						<li>#Lab14 </li>
-						<li>iOS 8</li>
-						<li>#2030NOW</li>
-						<li>#FloodWallStreet</li>
-						<li>#ReleaseTheHounds</li>
-					</ul>
-				</section>
-			</section>
-		</section>
 
 		<section class='content-bar' id='tweets-column'>
 			
 	
-			<section class='rounded-header'>
-				Tweets
-			</section>
-			    <div id="postswrapper">
-
-  					<!-- 	content -->
-		</div>
-				
-
 		<div id="tweets">	
 			<section id='tweet-stream'>
 				<ol id='tweet-list'>
@@ -370,16 +240,11 @@
 									<li><a href='#'><img src='images/favorite.png'>Favourite</a></li>
 									<li><a href='#'>... More</a></li>
 								</ul>
-
 							</div>
-
 						</span>
-
 					</li>
-				
+					
 				</ol>
-
-	
 			</section>
 			
 
@@ -387,85 +252,4 @@
 		</section>
 		</div>
 
-			</div>
-
-		<section class='content-bar sidebar' id='bar-right'>
-			<section id='who-to-follow-box'>
-				
-				<section class='rounded-header'>
-					<span>Who to follow</span>
-					<span id='small-links'> &middot; <a href='#'>Refresh</a> &middot;<a href='#'>View all</a></span>
-
-
-
-</section>
-
-<section id='who-to-follow-main'>
-
-	<section class="follow-suggestions container">					
-		<ul>
-			<li>
-				<img class="tweet-avatar" src="images/london_paddington.png">
-				<span class="name">London Paddington</span> <span class="source">@Netw...</span>
-				<button class="follow follow-suggestions"><img src="images/follow.png" class="follow follow-suggestions">Follow</button>
-			</li>
-			<li>
-				<img class="tweet-avatar" src="images/national_rail.png">
-				<span class="name">National Rail</span> <span class="source">@NRE_LndnO...</span>
-				<button class="follow follow-suggestions"><img src="images/follow.png" class="follow follow-suggestions">Follow</button>
-			</li>
-			<li>
-				<img class="tweet-avatar" src="images/heathrowexpress.jpeg">
-				<span class="name">Heathrow Express</span> <span class="source">@heathr...</span>
-				<button class="follow follow-suggestions"><img src="images/follow.png" class="follow follow-suggestions">Follow</button>
-			</li>
-		</ul>
-	</section>
-
-				</section>
-
-
-			
-				<section class='rounded-footer' id='follow-links'>
-					<a href='#'>Find people you know</a> - <a href='#'>Popular accounts</a>
-
-
-				</section>
-			</section>
-
-			<section id='about-twitter-box'>
-				<ul id='about-list'>
-					<li>2014 Twitter</li>
-					<li><a href='#'>About</a></li>
-					<li><a href='#'>Help</a></li>
-					<li><a href='#'>Terms</a></li>
-					<li><a href='#'>Privacy</a></li>
-					<li><a href='#'>Cookies</a></li>
-					<li><a href='#'>Ads info</a></li>
-					<li><a href='#'>Brand</a></li>
-					<li><a href='#'>Blog</a></li>
-					<li><a href='#'>Status</a></li>
-					<li><a href='#'>Apps</a></li>
-					<li><a href='#'>Jobs</a></li>
-					<li><a href='#'>Advertise</a></li>
-					<li><a href='#'>Businesses</a></li>
-					<li><a href='#'>Media</a></li>
-					<li><a href='#'>Developers</a></li>
-				</ul>
-			</section>
-		</section>
-	</section>
-
-  
-  </section>
-
-
-
-<script src="assets/js/jQuery.js"></script>
-<script src="assets/js/modal.js"></script>
-<script src="assets/js/main.js"></script>
-
-	
-</body>
-</html>
-
+</div>

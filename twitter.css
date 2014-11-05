@@ -43,20 +43,39 @@ a {
 		width: 409px;
 	}
 
+	/* is this the hover line */
+
 		#main-nav-area ul {
 			margin: 0;
 			padding: 0;
 			list-style-type: none;
-			line-height: 46px;
+			line-height: 46px; /* 46 */
 		}
 
+		/*	margin: 0;
+			padding: 0;
+			list-style-type: none;
+			line-height: 70px; /* 70 */
+
+
+/* this controls the height and width of the line */
+			.nav-section {
+				font-size: 13px;
+				font-weight: 500;
+				display: inline;
+				padding: 0px 14px 12px 4px;
+				height: 42px;
+			}
+
+		/*	backup
 			.nav-section {
 				font-size: 13px;
 				font-weight: 500;
 				display: inline;
 				padding: 0 14px 0 4px;
 				height: 42px;
-			}
+			}*/
+
 
 			.nav-section.active {
 				border-bottom: 4px solid #0084b4;
@@ -67,6 +86,7 @@ a {
 				border-bottom: 4px solid #0084b4;
 				transition: border .15s ease-in-out;
 				color: #0084B4;
+
 			}
 
 			.nav-section .icon {
@@ -78,7 +98,7 @@ a {
 			.nav-section .text {
 				margin-left: 3px;
 				margin-top: 17px;
-				vertical-align: middle;
+			/*	vertical-align: middle;*/
 			}
 
 	#logo-area {
@@ -151,7 +171,7 @@ a {
 
 	.content-bar {
 		float: left;
-		border-radius: 6px;
+		border-radius: 20px;
 		display: block;
 	}
 
@@ -164,7 +184,7 @@ a {
 		border-radius: 6px 6px 0 0;
 		padding: 12.5px;
 		color: #66757f;
-		font-size: 22px;
+		font-size: 18px;
 		font-weight: 300;
 		line-height: 22px;
 		background-color: white;
@@ -192,7 +212,7 @@ a {
 	#profile-cover-photo {
 		height: 96px;
 		box-sizing: border-box;
-		background-image: url('images/profile-cover.jpg');
+		background-image: url('images/05.jpg');
   	background-repeat: no-repeat;
   	background-size: cover;
   	border: 0;
@@ -202,7 +222,7 @@ a {
 			box-sizing: border-box;
 			height: 70px;
 			width: 70px;
-			background-image: url('images/profile-pic.jpg');
+			background-image: url('images/default_profile_5_bigger.png');
   		background-repeat: no-repeat;
   		background-size: cover;
   		vertical-align: bottom;
@@ -323,6 +343,8 @@ a {
 
 		#trends-header {
 			border-bottom: 0;
+	/*		font-size: 12px;*/
+/*			text-decoration: underline;*/
 		}
 
 		#trends-body {
@@ -333,21 +355,40 @@ a {
 			border-radius: 0 0 6px 6px;
 			padding-bottom: 10px;
 			color: #0084B4;
+
+						
+
 		}
 
-		#trends-body li {
+		#trends-body li:hover {
+				text-decoration: underline; /* underline when hover */
+
+		}
+
+		#trends-body li/*:hover*/{
 			padding-bottom: 2px;
 			font-size: 12px;
+		/*	text-decoration: underline;*/
+
+		
 		}
+
+	/*#tweets {
+
+		margin: 0 10px;
+
+			}*/
 
 	#tweets-column {
 		width: 590px;
-		margin: 0 10px;
+		margin: 0 5px; /* use this to make it symmetry */
 	}
 
 		.tweet-container {
-			border-left: 1px solid #e1e8ed;
-			border-right: 1px solid #e1e8ed;
+			border-left: 0px solid #e1e8ed;
+			border-right: 0px solid #e1e8ed;
+			margin-right: 6px;
+
 			min-height: 50px;
 			padding: 9px 12px;
 			font-family: "Helvetica Neue",Arial,sans-serif;
@@ -358,6 +399,8 @@ a {
 
 		.tweet-container:hover {
 			background-color: #f5f8fa;
+			border-left: 1px solid #e1e8ed;
+
 		}
 
 			.tweet-image {
@@ -421,16 +464,142 @@ a {
 				}
 
 				
-
+/*---WHO TO FOLLOW -------- */
 
 	#who-to-follow-main {
 		border-left: 1px solid #e1e8ed;
 		border-right: 1px solid #e1e8ed;
-		padding: 9px 12px;
+		padding: 25px 8px;
 		border: 1px solid #e1e8ed;
 		border-top: 0;
 		background-color: white;
 	}
+
+.name {
+		font-size: 14px;
+		font-weight: 500;
+		color: #000000;
+		letter-spacing: 0;
+	}
+
+
+	.source, .timestamp {
+		font-size: 13px;
+		line-height: 18px;
+		color: #8999A5;
+		font-weight: 200;
+		letter-spacing: 0.3px;
+	}
+
+
+
+
+/* new -resizing the follow images */
+img.follow.follow-suggestions {
+		height: 14px;
+		margin-right: 0;
+	}
+
+.tweet-avatar {
+		height: 48px;
+		border-radius: 5px;
+		float: left;
+		margin: 3px 10px 3px 3px;
+	}
+
+
+
+button.follow {
+	border: 1px solid #E1E8ED;
+	background-color: #f5f8fa;
+	background-image: linear-gradient(#fff,#f5f8fa);
+	margin-top: 4px;
+	border-radius: 5px;
+	font-weight: bold;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	display: block;
+}
+
+
+/* new - controls the follow on the right */
+
+
+img.follow {
+	float: left;
+	height: 15px;
+	margin-right: 3px;
+}
+
+
+	button.follow:hover {
+	background-image: linear-gradient(#fff,#E1E8ED);
+}
+
+button.follow:active {
+	background-color: #E1E8ED;
+	box-shadow: inset 1px 1px 7px #CDD3D8;
+}
+
+.follow-suggestions.container {
+	float: -100px;
+	margin-top: -48px; /* adjusting the london paddington */
+	margin-left: -8px; 
+	border-radius: opx;
+	/*border: solid 1px #E1E8ED;*/
+	background-color: #FFFFFF;
+	width: 258px; /* number is fine for width */
+	height: 175px; /* adjusting the height of who to follow */
+	padding: 15px;
+	font-size: 12px;
+	line-height: 27px;
+	font-weight: 200;
+	letter-spacing: 0.2px;
+	left: 0px;
+}
+
+	.follow-suggestions ul {
+		margin-top: 10px;
+	}
+
+	.follow-suggestions li {
+		margin-bottom: 9px;
+	}
+
+	.follow-suggestions .tweet-avatar {
+		margin: 0px 10px 0 0;
+	}
+
+
+
+
+	button.follow-suggestions {
+		font-size: 13px;
+		width: 86px;
+		line-height: 13px;
+		padding: 7px 7px 6px 11px;
+		margin-top: 3px;
+	}
+
+	img.follow.follow-suggestions {
+		height: 13px;
+		margin-right: 0;
+	}
+	
+	.follow-suggestions.actions {
+		background-color: #F5F8FA;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		border: 1px solid #E1E8ED;
+		width: 226px;
+		padding: 21px 20px 22px 42px;
+		margin-left: -16px;
+		margin-top: 15px;
+		background-image: url(../img/follow-actions.png);
+		background-repeat: no-repeat;
+		background-size: 27px;
+		background-position: 12px center;
+	}
+
 
 	#follow-links {
 		border-top: 0;
@@ -463,6 +632,7 @@ a {
 @media only screen and (max-width: 1235px) {
 	#bar-right {
 		display: none;
+	/*	margin: 200px;*/
 	}
 
 	#left-two-columns {

@@ -1,27 +1,43 @@
-# Week 7 Friday Challenge
-### Recreate the Twitter front-end
+Twitter Front End
+==================
 
-####Screenshot
-![Image1](/images/Twitter-front-end.png)
+The Friday Challenge at Maker's Academy for week 7 was to recreate the Twitter frontend:
 
-####Objectives
+Reimplement the Twitter.com feed page as close as possible to the real look and feel. You will need a Twitter account to do this task because you'll be inspecting the structure of the real Twitter feed to understand how it's done.
 
-The challenge was to recreate the Twitter feed page from scratch using only HTML, CSS and Javascript (no Bootstrap!). A test of front-end skills.
+Goal 1. Make sure it looks good on the desktop. As a minimum you should have the header and the list of tweets.
 
-Goal 1: Make it look like the real Twitter on a desktop.
-	- COMPLETE.
+Goal 2. Add JavaScript for infinite scrolling (using dummy data, no server-side at all), expanding the tweet input box on focus and, if you're feeling adventurous, a popup to add a new tweet.
 
-Goal 2: Make it responsive.
-	- COMPLETE. The right column disappears when the window is too small to house it, and the remaining two columns are centred.
+Technologies used
+------------------
 
-####Next steps
+* HTML
+* CSS
+* Javascript
 
-Goal 3: Add JS for infinite scrolling with a spinner to show data is being loaded. Expand the tweet box on focus, popup to add a new tweet.
+How to use
+-----------
 
-####How to run
+Clone the repository:
 
 ```shell
-git clone https://github.com/Bayonnaise/Twitter-front-end.git
-cd Twitter-front-end
-open twitter.html
+$ git clone git@github.com:leopoldkwok/twitter-frontend.git
+```
+
+Change directory:
+
+```shell
+$ cd twitter-frontend
+```
+
+Set the server running: 
+
+```shell
+$ python -m SimpleHTTPServer
+```
+Open a browser and type:
+
+```shell
+localhost:8000/twitter.html
 ```
