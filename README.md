@@ -1,5 +1,5 @@
 Twitter Front End
-=================
+==================
 
 The Friday Challenge at Maker's Academy for week 7 was to recreate the Twitter frontend:
 
